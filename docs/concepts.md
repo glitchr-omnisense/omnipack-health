@@ -5,7 +5,7 @@ order: 20
 
 # Concepts
 
-omnibase/health adds seven entities beside omnibase/office's (`Office`,
+omnipack/health adds seven entities beside omnipack/office's (`Office`,
 `Member`, the agenda, the vault's `Document`): each one completes an
 office's record rather than repeating it.
 
@@ -13,7 +13,7 @@ office's record rather than repeating it.
 
 | Entity | Table | Holds |
 |---|---|---|
-| `Practice` | `health_practice` | one to one with omnibase/office's `Office`: its `type` (`PracticeType`), FINESS number, presentation, emergency instructions, out-of-hours text, whether it accepts new patients, offers teleconsultation, care at home |
+| `Practice` | `health_practice` | one to one with omnipack/office's `Office`: its `type` (`PracticeType`), FINESS number, presentation, emergency instructions, out-of-hours text, whether it accepts new patients, offers teleconsultation, care at home |
 | `Practitioner` | `health_practitioner` | one to one with an office `Member`: profession code and profession (from the Annuaire Santé), specialty, `sector` (`Sector`), Carte Vitale, third-party payment, accepts new patients, MSSanté address |
 | `Fee` | `health_fee` | a practitioner's fee, or the practice's when it has none: category, label, amount and reimbursement as printed, position |
 
@@ -36,13 +36,13 @@ nursing practice): a site then shows care at home before appointments.
 
 A profile is not a medical record: nothing clinical is kept in it.
 `PatientProfiles::of($user)` makes it when first needed, and on
-omnibase/office's `ClientAccountEvent::CREATED` (an account opened from the
+omnipack/office's `ClientAccountEvent::CREATED` (an account opened from the
 practice's invitation). `PatientProfile::erase()` empties it.
 
 An appointment booked or requested online takes the patient's name as their
 profile writes it ("Camille ÉRABLE"), not the account's identifier
 (`AppointmentNaming`, on `AppointmentEvent::BOOKED` and `REQUESTED`).
-`DependentBeneficiaries` offers the dependants to omnibase/office's booking.
+`DependentBeneficiaries` offers the dependants to omnipack/office's booking.
 
 ## Care at home
 

@@ -1,6 +1,6 @@
-# omnibase/health
+# omnipack/health
 
-The health regime on [omnibase/office](https://github.com/glitchr-omnisense/omnibase-office): the site of a
+The health regime on [omnipack/office](https://github.com/glitchr-omnisense/omnipack-office): the site of a
 practice of care - a multi-professional health centre, a nursing practice, a physiotherapist, a midwife.
 
 - `Practice` (its kind, FINESS, what to do out of hours) and `Practitioner` (profession, agreement
@@ -24,7 +24,7 @@ by the ANS.
 ## Installation
 
 ```sh
-composer require omnibase/health          # brings omnibase/office, omnisense/omnibase 7.0 and omnibridge/symfony
+composer require omnipack/health          # brings omnipack/office, omnisense/omnibase 7.0 and omnibridge/symfony
 ```
 
 Under Symfony, enable the bundles and import the pages:
@@ -36,7 +36,7 @@ Base\Health\HealthBundle::class => ['all' => true],
 ```
 
 ```yaml
-# config/routes.yaml - after omnibase/office's
+# config/routes.yaml - after omnipack/office's
 health_controller:
     resource: "@HealthBundle/src/Controller/Client"
     type: attribute
@@ -51,7 +51,7 @@ Then a migration (`bin/console make:migration`, 7 tables prefixed `health_`) and
 ## First use
 
 Open `/urgences`: the emergency numbers (15, 112, 114, 3237, 116 117, from `health.emergency`) that
-the banner also shows on every page. Add a practitioner in the back office (omnibase/admin) and
+the banner also shows on every page. Add a practitioner in the back office (omnipack/admin) and
 `/tarifs` lists the fees displayed; [docs/configuration.md](docs/configuration.md) gives every key.
 
 Documentation: [docs/](docs/index.md). License: MIT since 2026-10-09; earlier versions remain published under LGPL-3.0-or-later.

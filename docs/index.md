@@ -1,11 +1,11 @@
 ---
-title: omnibase/health
+title: omnipack/health
 order: 1
 ---
 
-# omnibase/health
+# omnipack/health
 
-omnibase/health is a health practice's site on omnibase/office - a
+omnipack/health is a health practice's site on omnipack/office - a
 multiprofessional practice (MSP), a health centre, a nursing or
 physiotherapy practice, a midwife: the team with its fees, appointments, care at home, the patients'
 space and their data, medical secrecy applied to the documents, the
@@ -15,11 +15,11 @@ it is written for one profession only.
 ## Requirements
 
 - PHP 8.2 or later; doctrine/orm 2.15 or 3;
-- omnisense/omnibase 7.0 or later (7.x), omnibridge/symfony 3.0 or later, omnibase/office;
+- omnisense/omnibase 7.0 or later (7.x), omnibridge/symfony 3.0 or later, omnipack/office;
 - Symfony 6.4, 7 or 8 (config, console, dependency-injection, form,
   http-kernel, security-bundle).
 
-Suggested: omnibase/admin (the back office), omnibase/mailbox (patients write
+Suggested: omnipack/admin (the back office), omnipack/mailbox (patients write
 to the secretariat or their practitioner), omnisense/omnistate with
 omnistate/annuaire-sante (the team read from the RPPS),
 drenso/symfony-oidc-bundle (FranceConnect, Pro Santé Connect). The messages
@@ -28,8 +28,8 @@ are in French only (domain `health`).
 ## Installation
 
 ```sh
-composer require omnibase/health          # brings omnibase/office
-composer require omnibase/mailbox omnisense/omnistate omnistate/annuaire-sante   # suggested
+composer require omnipack/health          # brings omnipack/office
+composer require omnipack/mailbox omnisense/omnistate omnistate/annuaire-sante   # suggested
 ```
 
 ```php
@@ -39,7 +39,7 @@ Base\Health\HealthBundle::class => ['all' => true],
 ```
 
 ```yaml
-# config/routes.yaml - after omnibase/office's
+# config/routes.yaml - after omnipack/office's
 health_controller:
     resource: "@HealthBundle/src/Controller/Client"
     type: attribute
@@ -80,7 +80,7 @@ health:
     teleconsultation_referenced: false   # true only if the video solution is listed by the ANS
 ```
 
-The bundle sets, for omnibase/office: the team's and the member's templates (practitioners, with
+The bundle sets, for omnipack/office: the team's and the member's templates (practitioners, with
 fees and next slots), the contact form's warning ("no medical data here"), the patient space's menu.
 
 ## Pages
@@ -120,7 +120,7 @@ host; API keys: the Annuaire Santé's.
 
 ## Compliance
 
-Added to omnibase/office's widget: the mailbox's encryption and key, a second factor for every staff
+Added to omnipack/office's widget: the mailbox's encryption and key, a second factor for every staff
 account, fees displayed for every practitioner, out-of-hours instructions, an HDS-certified host
 declared, and the reminder that the built-in video is not ANS-listed.
 

@@ -14,7 +14,7 @@ $request = $homeCare->submit($patient, [
 ], $dependent, $prescription);
 ```
 
-1. **The address is checked first** against omnibase/office's `ServiceArea`s (postcodes, towns, or a
+1. **The address is checked first** against omnipack/office's `ServiceArea`s (postcodes, towns, or a
    radius). Outside all of them: `HomeCareException('home_care.error.outside_area')`, and nothing is
    kept - not the request, not the prescription.
 2. Inside: a `HomeCareRequest`, `pending`. The note is stored encrypted; the prescription, if any, is

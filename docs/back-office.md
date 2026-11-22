@@ -5,8 +5,8 @@ order: 36
 
 # The back office
 
-The screens are loaded when omnibase/admin is installed. Each one opens its
-writes to a role of the practice with omnibase/office's `OpenToTrait`.
+The screens are loaded when omnipack/admin is installed. Each one opens its
+writes to a role of the practice with omnipack/office's `OpenToTrait`.
 
 ## The screens
 
@@ -47,21 +47,21 @@ message.
 | Widget | Shows |
 |---|---|
 | `health_requests` | how many home care requests wait, and the five latest |
-| `health_inbox` | the signed-in member's unread messages and the desk's waiting ones, counts only (with omnibase/mailbox) |
+| `health_inbox` | the signed-in member's unread messages and the desk's waiting ones, counts only (with omnipack/mailbox) |
 
 ## Settings and keys
 
-On omnibase/admin's settings page, `health.legal.hds`: the host certified for
+On omnipack/admin's settings page, `health.legal.hds`: the host certified for
 health data (HDS) the practice declares. On the API keys page, the Annuaire
 Santé's key.
 
 ## Compliance
 
-Six checks are added to omnibase/office's compliance tile:
+Six checks are added to omnipack/office's compliance tile:
 
 | Check | Warns when |
 |---|---|
-| `MailboxKeyCheck` | with omnibase/mailbox: its encryption is off, or on without a key |
+| `MailboxKeyCheck` | with omnipack/mailbox: its encryption is off, or on without a key |
 | `StaffTwoFactorCheck` | a staff account signs in without a second factor, or nothing requires one of the staff's role |
 | `FeesDisplayedCheck` | an active practitioner has no fee, and the practice has none of its own (it names them) |
 | `EmergencyCheck` | the main practice has no out-of-hours text |

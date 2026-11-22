@@ -7,7 +7,7 @@ order: 30
 
 ## Documents
 
-omnibase/office's vault lets the recipient and the sender read a document, and nobody else unless a
+omnipack/office's vault lets the recipient and the sender read a document, and nobody else unless a
 regime says so. `Base\Health\Security\CareTeamAudience` is that regime:
 
 | Who | Sees that it exists (title) | Reads it |
@@ -34,7 +34,7 @@ subject. All of it is read signed in.
 ## At rest
 
 Documents, their titles and file names, appointments' reasons, home care notes: encrypted by
-omnibase/office's `Cipher`. Messages and their subjects: by omnibase/mailbox (`encrypt: true`). Both
+omnipack/office's `Cipher`. Messages and their subjects: by omnipack/mailbox (`encrypt: true`). Both
 fail closed without their key.
 
 ## The staff's second factor

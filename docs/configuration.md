@@ -62,17 +62,17 @@ DPO.
 ([Patients' data](patients-data.md)); `--dry-run` says what would go and
 removes nothing. Run it from cron, once a day.
 
-## What the bundle sets for omnibase/office
+## What the bundle sets for omnipack/office
 
 The team's and the member's templates (practitioners, with their fees and
 next slots), the contact form's warning (no medical data there), the patient
-space's menu. Its services plug into omnibase/office's and
-omnibase/mailbox's interfaces:
+space's menu. Its services plug into omnipack/office's and
+omnipack/mailbox's interfaces:
 
 | Service | Interface or event |
 |---|---|
 | `Security\CareTeamAudience` | who reads a vault document |
-| `Service\DependentBeneficiaries` | omnibase/office's `BeneficiaryProviderInterface`: the dependants in the booking |
+| `Service\DependentBeneficiaries` | omnipack/office's `BeneficiaryProviderInterface`: the dependants in the booking |
 | `Mailbox\CareTeamRecipients` | whom a patient may write to besides the secretariat |
 | `Service\AppointmentNaming` | `AppointmentEvent::BOOKED`, `REQUESTED` |
 | `Service\PatientProfiles` | `ClientAccountEvent::CREATED` |

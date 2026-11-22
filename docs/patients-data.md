@@ -8,7 +8,7 @@ order: 32
 `/espace` (`ROLE_USER`): the next appointments (join the video room, add to a calendar, cancel), the
 documents not read yet, the home care asked, the care team. `/espace/profil`: who they are for the
 practice, their "médecin traitant", and their say on sharing within the team. `/espace/proches`:
-their `Dependent`s - who they book for (the booking then offers them, through omnibase/office's
+their `Dependent`s - who they book for (the booking then offers them, through omnipack/office's
 `BeneficiaryProviderInterface`).
 
 A `PatientProfile` is not a medical record: nothing clinical is kept in it.
@@ -28,5 +28,5 @@ A `PatientProfile` is not a medical record: nothing clinical is kept in it.
 
 `health:purge` removes, after `health.retention` months: past appointments, decided home care
 requests, the access log; documents expired or withdrawn, their files destroyed; contact requests
-(omnibase/office's `contact.retention_months`); closed video rooms' handshakes. The durations are the
+(omnipack/office's `contact.retention_months`); closed video rooms' handshakes. The durations are the
 practice's to set with its DPO; the defaults are placeholders, not legal advice.
